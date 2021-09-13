@@ -33,7 +33,8 @@ class ViewLoad:
         #--'content': b'230/t555/n231/t5555.....  
         self.widget['Fld_spectra'] = wdg.FileUpload(description='Load spectra', icon='file-o', 
                                                     accept =   self.parsers[default_parser]['file format'], 
-                                                    multiple = self.parsers[default_parser]['multiple files'])                                                    
+                                                    multiple = self.parsers[default_parser]['multiple files'])
+                                             
    
         
         self.widgetbox['load_spectra'] = wdg.VBox([self.widget['Ddn_parser'],
@@ -123,6 +124,8 @@ class ViewLoad:
     @property
     def current_parser_name(self):
         return self.widget['Ddn_parser'].value
+
+        
 
     @property
     def current_spectrum(self):
